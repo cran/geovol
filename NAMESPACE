@@ -9,7 +9,6 @@ importFrom(
 	"optim", "nobs", "pnorm", "residuals", "rnorm"
 )
 
-
 export(
 
 	# main functions: 
@@ -21,7 +20,7 @@ export(
 	"print.geovol", "residuals.geovol"
 )
     
-# methods for class GEOVOL:
+# methods for class geovol:
 
 S3method("coef", "geovol")
 S3method("fitted", "geovol")
@@ -29,4 +28,5 @@ S3method("logLik", "geovol")
 S3method("nobs", "geovol")
 S3method("print", "geovol")
 S3method("residuals", "geovol")
+S3method("summary", "geovol")
 

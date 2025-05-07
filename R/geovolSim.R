@@ -1,8 +1,10 @@
-geovolSim <- function(n, m, innovations = NULL, x.sd = 0.5, as.zoo = TRUE, verbose = FALSE)
+geovolSim <- function(n, m, innovations = NULL, x.sd = 0.5, as.zoo = TRUE, 
+                      verbose = FALSE)
 {
   
   if (is.null(innovations)) innovations <- matrix(rnorm(n*m), n, m)
-  if (is.null(colnames(innovations))) colnames(innovations) <- paste("innovations", 1:m, sep = "")
+  if (is.null(colnames(innovations))) colnames(innovations) <- 
+      paste("innovations", 1:m, sep = "")
   if (as.zoo == TRUE) innovations <- as.zoo(innovations)
   x <- exp(rnorm(n, 0, x.sd))
   x <- x/mean(x)

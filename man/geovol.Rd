@@ -4,7 +4,13 @@
 \title{Estimate GEOVOL and GEOVOL loadings}
  
 \description{ 
-Maximum likehlihood estimation of the GEOVOL and GEOVOL loadings. Estimation is carried out as a maximization-maximization procedure, where the latent multiplicative volatility factor and the factor loadings are estimated iteratively until convergence. Either a balanced or an unbalanced panel can be used. For each point in time t, GEOVOL is estimated using all the available values in the cross-section. The GEOVOL loadings are estimated for each time series. 
+Maximum likehlihood estimation of the GEOVOL and GEOVOL loadings. Estimation is 
+carried out as a maximization-maximization procedure, where the latent 
+multiplicative volatility factor and the factor loadings are estimated 
+iteratively until convergence. Either a balanced or an unbalanced panel 
+can be used. For each point in time t, GEOVOL is estimated using all the 
+available values in the cross-section. The GEOVOL loadings are estimated for 
+each time series. 
 }
 
 \usage{
@@ -12,14 +18,23 @@ Maximum likehlihood estimation of the GEOVOL and GEOVOL loadings. Estimation is 
 }
 
 \arguments{
-\item{e}{matrix, multivariate time series or \code{\link{zoo}} object of volatility standardized residuals with mean zero and unit variance.}
-\item{initial.values}{a list containing the initial parameter values passed on to the optimization routine (\link{optim} for the GEOVOL factor and loadings. If list(), the default, then the values are chosen automatically; \code{x} - \code{NULL} or numeric vector containing the \code{n} initial values for the GEOVOL factor, \code{x_{t}, t=1,\dots,n}. \code{s} - \code{NULL} or numeric vector containing the \code{m} initial values for the GEOVOL loadings, \code{s_{i}, i=1,\dots,m}.}
+\item{e}{matrix, multivariate time series or \code{\link[zoo]{zoo}} object of 
+volatility standardized residuals with zero mean and unit variance.}
+\item{initial.values}{a list containing the initial parameter values passed on 
+to the optimization routine (\link{optim} for the GEOVOL factor and loadings. 
+If list(), the default, then the values are chosen automatically; \code{x} - 
+\code{NULL} or numeric vector containing the \code{n} initial values for the 
+GEOVOL factor, \code{x_{t}, t=1,\dots,n}. \code{s} - \code{NULL} or numeric 
+vector containing the \code{m} initial values for the GEOVOL loadings, 
+\code{s_{i}, i=1,\dots,m}.}
 }
 
 \value{An object of class 'geovol'.}
 
 \references{
-Engle, R.F. and Campos-Martins, S. (2020) Measuring and hedging geopolitical risk. Available at \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3685213}. 
+Engle, R.F. and Campos-Martins, S. (2023) Measuring and hedging geopolitical 
+risk, Journal of Financial Economics 147: 221--242. Available at 
+\doi{10.1016/j.jfineco.2022.09.009}. 
 }
 
 \author{Susana Campos-Martins}

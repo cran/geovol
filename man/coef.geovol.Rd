@@ -6,6 +6,7 @@
 \alias{nobs.geovol}
 \alias{print.geovol}
 \alias{residuals.geovol}
+\alias{summary.geovol}
 
 \title{Extraction functions for a 'geovol' object}
 
@@ -18,13 +19,16 @@
   \method{nobs}{geovol}(object, ...)
   \method{print}{geovol}(x, n.extreme = 20, ...)
   \method{residuals}{geovol}(object, as.zoo = TRUE, ...)
+  \method{summary}{geovol}(object, ...)
 }
 
 \arguments{
   \item{object}{an object of class 'geovol'.}
   \item{x}{an object of class 'geovol'.}
-  \item{as.zoo}{logical. If \code{TRUE}, then the returned result is of class \code{\link{zoo}}.}
-  \item{n.extreme}{\code{integer} indicating the \code{n.extreme} most extreme GEOVOL events to be printed.}
+  \item{as.zoo}{logical. If \code{TRUE}, then the returned result is of class 
+  \code{\link[zoo]{zoo}}.}
+  \item{n.extreme}{\code{integer} indicating the \code{n.extreme} most extreme 
+  GEOVOL events to be printed.}
   \item{\dots}{additional arguments.}
 }
 
@@ -35,15 +39,23 @@
   \item{nobs:}{the number of observations used in the estimation.}
   \item{print:}{print of the estimation results.}
   \item{residuals:}{GEOVOL standardised residuals.}
+  \item{summary:}{summary of estimation results.}
+
 }
 
 \references{
-Engle, R.F. and Campos-Martins, S. (2020) Measuring and hedging geopolitical risk. Available at \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3685213}. 
+Engle, R.F. and Campos-Martins, S. (2023) Measuring and hedging geopolitical 
+risk, Journal of Financial Economics 147: 221--242. Available at 
+\doi{10.1016/j.jfineco.2022.09.009}. 
 }
 
 \author{Susana Campos-Martins}
 
-\seealso{\code{\link{geovol}}, \code{\link{geovolSim}}, \code{\link{zoo}}}
+\seealso{
+\code{\link{geovol}}, 
+\code{\link{geovolSim}}, 
+\code{\link[zoo]{zoo}}
+}
 
 \examples{
 set.seed(123)

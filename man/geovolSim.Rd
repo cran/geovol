@@ -14,10 +14,16 @@ geovolSim(n, m, innovations = NULL, x.sd = 0.5, as.zoo = TRUE, verbose = FALSE)
 \arguments{
   \item{n}{integer indicating the number of observations.}
   \item{m}{integer indicating the number of time series.}
-  \item{innovations}{\code{NULL} or numeric vector with the innovations. If \code{NULL}, then standard normal innovations are generated with \code{\link{rnorm}}.}
-  \item{x.sd}{numeric scalar indicating the standard deviation of the normal random variable, v, used to simulate the squared GEOVOL factor, x, according to the formula x = exp(v).}
-  \item{as.zoo}{logical. If \code{TRUE}, then the returned result is of class \code{\link{zoo}}.}
-  \item{verbose}{\code{logical}, if \code{TRUE}, the simulated time series, e, the innovations and the squared GEOVOL factor, x, are also returned.}
+  \item{innovations}{\code{NULL} or numeric vector with the innovations. If 
+  \code{NULL}, then standard normal innovations are generated with 
+  \code{\link{rnorm}}.}
+  \item{x.sd}{numeric scalar indicating the standard deviation of the normal 
+  random variable, v, used to simulate the squared GEOVOL factor, x, according 
+  to the formula x = exp(v).}
+  \item{as.zoo}{logical. If \code{TRUE}, then the returned result is of class 
+  \code{\link[zoo]{zoo}}.}
+  \item{verbose}{\code{logical}, if \code{TRUE}, the simulated time series, e, 
+  the innovations and the squared GEOVOL factor, x, are also returned.}
 }
 
 \value{A matrix with the simulated values.}

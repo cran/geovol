@@ -21,5 +21,6 @@ print.geovol <- function (x, n.extreme = 20, ...)
   cat("\n")  
   print(round((x$s), 4))
   cat("\n")
-  
 }
+
+

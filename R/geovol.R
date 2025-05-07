@@ -70,8 +70,10 @@ geovol <- function (e, initial.values = list())
     }    
     geovol2 <- matrix(NA, n, m)
     for (i in 1:m) {
-      geovol2[!is.na(e[,i]),i] <- geovolObj(par = shat[i], par.fixed = xhat[!is.na(e[,i])], 
-                               y = na.omit(e[,i]), x = FALSE, flag = 2)
+      geovol2[!is.na(e[,i]),i] <- geovolObj(par = shat[i], par.fixed = 
+                                              xhat[!is.na(e[,i])],
+                                            y = na.omit(e[,i]), x = FALSE, 
+                                            flag = 2)
     }
     colnames(geovol2) <- paste(names)
     rownames(geovol2) <- paste(dates)

@@ -4,7 +4,9 @@
 \title{Test for GEOVOL}
 
 \description{  
-Compute the GEOVOL test statistic for examining the null hypothesis that the average correlation of the squared volatility standardized residuals (which should be uncorrelated) is zero against the alternative that it is positive.
+Compute the GEOVOL test statistic for examining the null hypothesis that the 
+average correlation of the squared volatility standardized residuals (which 
+should be uncorrelated) is zero against the alternative that it is positive.
 }
 
 \usage{
@@ -12,7 +14,7 @@ geovolTest(e)
 }
 
 \arguments{
-\item{e}{matrix, multivariate time series or \code{\link{zoo}} object.}
+\item{e}{matrix, multivariate time series or \code{\link[zoo]{zoo}} object.}
 }
 
 \value{
@@ -20,7 +22,9 @@ The average correlation, the test statistic and the p-value.
 }
 
 \references{
-Engle, R.F. and Campos-Martins, S. (2020) Measuring and hedging geopolitical risk. Available at \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3685213}. 
+Engle, R.F. and Campos-Martins, S. (2023) Measuring and hedging geopolitical 
+risk, Journal of Financial Economics 147: 221--242. Available at 
+\doi{10.1016/j.jfineco.2022.09.009}. 
 }
 
 \author{Susana Campos-Martins}
